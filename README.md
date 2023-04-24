@@ -1,20 +1,25 @@
-# nb2py
+# jnb2py
 
-*nb2py* is a Python library for converting Notebooks(`.ipynb`) into Python (`.py`) files.
+*jnb2py* is a Python library for converting Notebooks(`.ipynb`) into Python (`.py`) files.
 
 ## Quickstart
 
-nb2py requires an installation of Python 3.10 or greater, as well as pip.
+jnb2py requires an installation of Python 3.10 or greater, as well as pip.
 
 ### Installation
-pass
+jnb2py requires an installation of Python 3.10 or greater, as well as pip. (Pip is typically bundled with Python installations.)
+
+To install from PyPI with pip:
+```bash
+pip install -i https://test.pypi.org/simple/ jnb2py
+```
 
 ### Using nb2py in a Python Script
 
 To convert a notebook, you'll need to do this.
 
 ```python
->>> from nb2py import Converter
+>>> from jnb2py import Converter
 >>> file_path = "/path/to/the/notebook.ipynb"
 >>> converter = Converter(file_path)
 >>> output_file_name = "extract_code.py"

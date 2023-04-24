@@ -4,11 +4,11 @@ with open("README.md", "r") as f:
     long_description = f.read()
 
 setup(
-    name="nb2py",
+    name="jnb2py",
     version="0.0.1",
     description="Converts .ipynb files to .py files.",
-    package_dir={"": "nb2py"},
-    packages=find_packages(where="nb2py"),
+    package_dir={"": "jnb2py"},
+    packages=find_packages(where="jnb2py"),
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/subhranil2605/nb2py",

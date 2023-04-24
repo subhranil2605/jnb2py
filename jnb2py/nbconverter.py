@@ -1,9 +1,8 @@
-import os
 import json
 from typing import AnyStr, Dict, Any, List
 
-from models.cell_model import Cell
-from utils import write_to_a_file
+from jnb2py.models import Cell
+from jnb2py.utils import write_to_a_file
 
 NEW_LINE_CHARACTER = "\n"
 
@@ -13,7 +12,9 @@ class Converter:
         self.nb_file_path: str = nb_file_path
 
     def convert_to_py(self, file_name: str, dest_path: str) -> None:
-        """ h """
+        """ Converts the ipynb notebook to py file
+
+        """
 
         try:
             # all the cells from the notebook
