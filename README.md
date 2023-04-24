@@ -11,7 +11,7 @@ jnb2py requires an installation of Python 3.10 or greater, as well as pip. (Pip 
 
 To install from PyPI with pip:
 ```bash
-pip install -i https://test.pypi.org/simple/ jnb2py
+pip install jnb2py
 ```
 
 ### Using nb2py in a Python Script
