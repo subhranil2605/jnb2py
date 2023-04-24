@@ -8,14 +8,26 @@ NEW_LINE_CHARACTER = "\n"
 
 
 class Converter:
+    """
+    A class to Convert ipynb notebook to python file
+
+    :param nb_file_path: file path of the notebook file.
+    :type nb_file_path: str
+    """
+
     def __init__(self, nb_file_path: str) -> None:
         self.nb_file_path: str = nb_file_path
 
     def convert_to_py(self, file_name: str, dest_path: str) -> None:
-        """ Converts the ipynb notebook to py file
-
         """
+        Converts the ipynb notebook to py file
 
+        :param file_name: output python file name
+        :type file_name: str
+        :param dest_path: destination path of the output file
+        :type dest_path: str
+        :return: None
+        """
         try:
             # all the cells from the notebook
             cells = self._parse_notebook().get("cells")
@@ -38,7 +50,14 @@ class Converter:
             print(str(e))
 
     def _parse_notebook(self) -> Dict[str, Any]:
+        """
+         As we can see that the structure of the .ipynb file
+        is like JSON file, we can read convert this to a
+        Python dictionary.
 
+        :return: dictionary version of the notebook
+        :rtype: dict
+        """
         try:
             # getting the notebook data, which is in JSON format
             notebook_data: AnyStr = self._get_data_from_notebook()
@@ -52,6 +71,12 @@ class Converter:
             print(str(e))
 
     def _get_data_from_notebook(self) -> AnyStr:
+        """
+        Read the notebook from the specified file_path
+
+        :return: string of the data
+        :rtype: AnyStr
+        """
 
         try:
             with open(self.nb_file_path, "r") as f_obj:
