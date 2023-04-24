@@ -5,7 +5,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="jnb2py",
-    version="0.0.1",
+    version="0.0.2",
     description="Converts .ipynb files to .py files.",
     packages=find_packages(),
     long_description=long_description,
